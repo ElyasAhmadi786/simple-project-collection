@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test1/home_page.dart';
-import 'package:test1/pages/project1.dart';
-import 'package:test1/pages/project2.dart';
-import 'package:test1/pages/project3.dart';
-import 'package:test1/pages/project4.dart';
-import 'package:test1/pages/project5.dart';
-import 'package:test1/pages/project6.dart';
-import 'package:test1/pages/project7.dart';
-import 'package:test1/pages/project8.dart';
+import 'package:flutter_application_1/home_page.dart';
+
 
 
 void main() {
