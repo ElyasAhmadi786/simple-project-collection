@@ -25,7 +25,7 @@ class Project1Page extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 100,
-                backgroundImage: AssetImage('images/elyas.jpg'),
+                backgroundImage: AssetImage('images/hack10.jpg'),
               ),
               Text(
                 'Elyas Ahmadi',
