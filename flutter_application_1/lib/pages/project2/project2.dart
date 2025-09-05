@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/project2/icon_content.dart';
+import 'package:flutter_application_1/pages/project2/reusable_card.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../main.dart';
+import '../../main.dart';
 
 const double bottomContainerHeight = 75;
-const activeCardColor = Color(0xFF1D1E33);
+const inactiveCardColor = Color(0xFF1D1E33);
+const activeCardColor = Color(0xFF111328);
 const bottomContainerColor = Color(0xFFEB1555);
+
+enum Gender { male, female }
 
 class Project2Page extends StatelessWidget {
   const Project2Page({super.key});
@@ -30,6 +35,8 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+  Gender? selectedGender;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +56,14 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
+                    onPress: () {
+                      setState(() {
+                        selectedGender = Gender.male;
+                      });
+                    },
+                    color: selectedGender == Gender.male
+                        ? activeCardColor
+                        : inactiveCardColor,
                     child: IconContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
@@ -57,6 +72,14 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: ReusableCard(
+                    onPress: () {
+                      setState(() {
+                        selectedGender = Gender.female;
+                      });
+                    },
+                    color: selectedGender == Gender.female
+                        ? activeCardColor
+                        : inactiveCardColor,
                     child: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
@@ -82,42 +105,6 @@ class _InputPageState extends State<InputPage> {
             height: bottomContainerHeight,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class IconContent extends StatelessWidget {
-  final IconData? icon;
-  final String? label;
-
-  IconContent({this.icon, this.label});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icon, size: 68),
-        SizedBox(height: 15),
-        Text(label!, style: TextStyle(fontSize: 20, color: Color(0xFF8D8E98))),
-      ],
-    );
-  }
-}
-
-class ReusableCard extends StatelessWidget {
-  final Color? color;
-  final Widget? child;
-  ReusableCard({this.color, this.child});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: child,
-      margin: EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: color ?? activeCardColor,
-        borderRadius: BorderRadius.circular(10),
       ),
     );
   }

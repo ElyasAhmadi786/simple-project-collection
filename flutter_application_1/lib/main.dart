@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_page.dart';
 import 'package:flutter_application_1/pages/project1.dart';
-import 'package:flutter_application_1/pages/project2.dart';
+import 'package:flutter_application_1/pages/project2/project2.dart';
 import 'package:flutter_application_1/pages/project3.dart';
 import 'package:flutter_application_1/pages/project4.dart';
 import 'package:flutter_application_1/pages/project5.dart' show Project5Page;
