@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_page.dart';
-
-
+import 'package:flutter_application_1/pages/project1.dart';
+import 'package:flutter_application_1/pages/project2.dart';
+import 'package:flutter_application_1/pages/project3.dart';
+import 'package:flutter_application_1/pages/project4.dart';
+import 'package:flutter_application_1/pages/project5.dart' show Project5Page;
+import 'package:flutter_application_1/pages/project6.dart';
+import 'package:flutter_application_1/pages/project7.dart';
+import 'package:flutter_application_1/pages/project8.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,15 +29,14 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class RusableDrawer extends StatelessWidget {
-  const RusableDrawer({
-    super.key,
-  });
+  const RusableDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor:  Color(0xFF0A0D22),
+      backgroundColor: Color(0xFF0A0D22),
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -63,7 +68,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project1Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project1Page(),
+                      ),
                     );
                   },
                 ),
@@ -73,7 +80,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project2Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project2Page(),
+                      ),
                     );
                   },
                 ),
@@ -83,7 +92,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project3Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project3Page(),
+                      ),
                     );
                   },
                 ),
@@ -93,7 +104,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project4Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project4Page(),
+                      ),
                     );
                   },
                 ),
@@ -103,7 +116,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project5Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project5Page(),
+                      ),
                     );
                   },
                 ),
@@ -113,7 +128,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project6Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project6Page(),
+                      ),
                     );
                   },
                 ),
@@ -123,7 +140,9 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project7Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project7Page(),
+                      ),
                     );
                   },
                 ),
@@ -133,11 +152,12 @@ class RusableDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Project8Page()),
+                      MaterialPageRoute(
+                        builder: (context) => const Project8Page(),
+                      ),
                     );
                   },
                 ),
-
               ],
             ),
           ),
