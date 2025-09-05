@@ -38,7 +38,7 @@ class _InputPageState extends State<InputPage> {
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
         title: const Text(
-          "BMI Calculator Page",
+          "BMI Calculator Project2",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Color(0xFF06062C),
