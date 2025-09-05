@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
-        title: const Text("Main Page",
+        title: const Text("Home Page",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.blueGrey[800],
