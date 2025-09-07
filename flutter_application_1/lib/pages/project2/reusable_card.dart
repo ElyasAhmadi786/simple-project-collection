@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-const activeCardColor = Color(0xFF1D1E33);
+import 'package:flutter_application_1/pages/project2/constants.dart';
 
 class ReusableCard extends StatelessWidget {
   final Color? color;
@@ -15,7 +14,7 @@ class ReusableCard extends StatelessWidget {
         child: child,
         margin: EdgeInsets.all(15),
         decoration: BoxDecoration(
-          color: color ?? activeCardColor,
+          color: color ?? kActiveCardColor,
           borderRadius: BorderRadius.circular(10),
         ),
       ),
